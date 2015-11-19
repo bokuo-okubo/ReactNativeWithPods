@@ -16,8 +16,8 @@ PODS:
   - Realm/Headers (0.96.2)
 
 DEPENDENCIES:
-  - Nimble
-  - Quick
+  - Nimble (= 3.0.0)
+  - Quick (~> 0.8.0)
   - React/Core (from `../node_modules/react-native`)
   - React/RCTImage (from `../node_modules/react-native`)
   - React/RCTNetwork (from `../node_modules/react-native`)
