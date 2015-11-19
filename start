@@ -1,0 +1,4 @@
+#!/bin/sh
+JS_DIR=`pwd`/ReactComponents
+cd ios/Pods/Target\ Support\ Files/React
+npm run start -- --root $JS_DIR

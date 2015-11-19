@@ -1,26 +1,22 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ */
 'use strict';
 
-var React = require('react-native');
-var {
-  Text,
-  View
+const React = require('react-native');
+const Web = require('./jsx/components/Web')
+
+let {
+  AppRegistry
 } = React;
 
-var styles = React.StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'red'
+let ReactNativeWithPods = React.createClass({
+  render: function() {
+    return (
+      <Web/>
+    );
   }
 });
 
-class SimpleApp extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>This is a simple application.</Text>
-      </View>
-    )
-  }
-}
-
-React.AppRegistry.registerComponent('SimpleApp', () => SimpleApp);
+AppRegistry.registerComponent('ReactNativeWithPods', () => ReactNativeWithPods);
