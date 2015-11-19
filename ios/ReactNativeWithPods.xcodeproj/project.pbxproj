@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2019A0D86B900BFC5BDE799C /* Pods_ReactNativeWithPodsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343F57786479FAFFA55197C7 /* Pods_ReactNativeWithPodsTests.framework */; };
 		6086E7D8DEBF2D43941AAB2C /* Pods_ReactNativeWithPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1DA7C58417385B79E646F8 /* Pods_ReactNativeWithPods.framework */; };
+		785106BB1BFDC91300640AA5 /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106BA1BFDC91300640AA5 /* MyProtocol.swift */; };
 		78E52D991BFD577400EDB819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E52D981BFD577400EDB819 /* AppDelegate.swift */; };
 		78E52D9B1BFD577400EDB819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E52D9A1BFD577400EDB819 /* ViewController.swift */; };
 		78E52DA01BFD577400EDB819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E52D9F1BFD577400EDB819 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		52509ECEDA6171DE04FCC05B /* Pods-ReactNativeWithPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeWithPods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeWithPods/Pods-ReactNativeWithPods.debug.xcconfig"; sourceTree = "<group>"; };
 		6F1DA7C58417385B79E646F8 /* Pods_ReactNativeWithPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeWithPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7819C5191BFD5A56008BDD45 /* ReactNativeWithPods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWithPods-Bridging-Header.h"; sourceTree = "<group>"; };
+		785106BA1BFDC91300640AA5 /* MyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProtocol.swift; sourceTree = "<group>"; };
 		78E52D951BFD577400EDB819 /* ReactNativeWithPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeWithPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E52D981BFD577400EDB819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78E52D9A1BFD577400EDB819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		78E52D971BFD577400EDB819 /* ReactNativeWithPods */ = {
 			isa = PBXGroup;
 			children = (
+				785106BA1BFDC91300640AA5 /* MyProtocol.swift */,
 				7819C5191BFD5A56008BDD45 /* ReactNativeWithPods-Bridging-Header.h */,
 				78E52D981BFD577400EDB819 /* AppDelegate.swift */,
 				78E52D9A1BFD577400EDB819 /* ViewController.swift */,
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785106BB1BFDC91300640AA5 /* MyProtocol.swift in Sources */,
 				78E52D9B1BFD577400EDB819 /* ViewController.swift in Sources */,
 				78E52D991BFD577400EDB819 /* AppDelegate.swift in Sources */,
 			);
