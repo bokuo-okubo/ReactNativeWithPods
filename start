@@ -1,4 +1,21 @@
 #!/bin/sh
+
+if [ -e node_modules ]; then
+    echo ""
+else
+    npm install
+fi
+
+cd ios/
+
+if [ -e Pods ]; then
+    echo ""
+else
+    pod install
+fi
+
+cd ../
+
 JS_DIR=`pwd`/ReactComponents
 cd ios/Pods/Target\ Support\ Files/React
 npm run start -- --root $JS_DIR
