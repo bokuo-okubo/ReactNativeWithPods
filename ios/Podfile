@@ -4,7 +4,7 @@
 
 use_frameworks!
 
-target 'ReactNativeWithPods' do
+def main_pods
   pod 'Realm'
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
     'Core',
@@ -16,13 +16,13 @@ target 'ReactNativeWithPods' do
   ]
 end
 
-target 'ReactNativeWithPodsTests' do
+def testing_pods
   pod 'Realm/Headers'
-  pod 'Quick'
-  pod 'Nimble'
+  pod 'Quick', '~> 0.8.0'
+  pod 'Nimble', '3.0.0'
 end
 
-target 'ReactNativeWithPodsUITests' do
 
-end
-
+target 'ReactNativeWithPods' do main_pods end;
+target 'ReactNativeWithPodsTests' do testing_pods end;
+target 'ReactNativeWithPodsUITests' do testing_pods end;
