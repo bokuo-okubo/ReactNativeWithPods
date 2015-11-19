@@ -15,18 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
-        let jsCodeLocation = NSURL(string: "http://localhost:8081/index.ios.bundle?platform=ios&dev=truew")
-        let rootView = RCTRootView(bundleURL: jsCodeLocation,
-                                   moduleName: "ReactNativeWithPods",
+
+        
+        let rootView = RCTRootView(bundleURL: NSURL(string: Config().jsCodeLocation ),
+                                   moduleName: Config().moduleName,
                                    initialProperties: nil,
                                    launchOptions: nil)
-
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+
         let myViewController = ViewController()
         myViewController.view = rootView
+
         self.window!.rootViewController = myViewController
-        self.window!.backgroundColor = UIColor.redColor()
         self.window!.makeKeyAndVisible()
+
+        NSURLProtocol.registerClass(MyProtocol)
         return true
     }
 

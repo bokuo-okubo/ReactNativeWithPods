@@ -12,18 +12,21 @@ class MyProtocol: NSURLProtocol {
 
 
     override class func canInitWithRequest(request: NSURLRequest) -> Bool {
+
+        let host = Config().host
+
         if let reqHost = request.URL?.host {
-            return isCsHost(reqHost, defaultHost: "creativesurvey")
+            return isAcceptableHost(reqHost, defaultHost: host)
+        } else {
+            return false
         }
-        return false
-//        if host?.rangeOfString("ads") != nil {
-//            return true;
-//        }
-//        return false
     }
 
-    class func isCsHost(requestHost: String, defaultHost: String) -> Bool {
+    class func isAcceptableHost(requestHost: String, defaultHost: String) -> Bool {
+        print(requestHost, defaultHost)
 //        switch requestHost.rangeOfString(defaultHost) {
+//        case Range { return true}
+//        case NilLiteralConvertible { return false }
 //        }
         return false
     }
