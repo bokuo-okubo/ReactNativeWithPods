@@ -18,6 +18,8 @@ end
 
 target 'ReactNativeWithPodsTests' do
   pod 'Realm/Headers'
+  pod 'Quick'
+  pod 'Nimble'
 end
 
 target 'ReactNativeWithPodsUITests' do
