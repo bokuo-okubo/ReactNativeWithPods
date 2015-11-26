@@ -9,9 +9,8 @@
 import UIKit
 
 class MyProtocol: NSURLProtocol {
-
-
-    override class func canInitWithRequest(request: NSURLRequest) -> Bool {
+    /* class methods */
+    override static func canInitWithRequest(request: NSURLRequest) -> Bool {
 
         let host = Config().hostName
 
@@ -22,32 +21,38 @@ class MyProtocol: NSURLProtocol {
         }
     }
 
-    override class func canonicalRequestForRequest (request: NSURLRequest) -> NSURLRequest {
+    override static func canonicalRequestForRequest (request: NSURLRequest) -> NSURLRequest {
         return request;
     }
 
-    class func isAcceptableHost(requestHost: String, defaultHost: String) -> Bool {
-        print("request-host:", requestHost)
-        print("default-host:", defaultHost)
+    static func isAcceptableHost(requestHost: String, defaultHost: String) -> Bool {
         if requestHost == defaultHost { return true }
         return false
     }
 
+    /* instance methods */
     override func startLoading() {
-        let dict = ["message" : "This is exactly Google.com"]
+        if let reqURL = self.request.URL {
+            p("requestURL:",reqURL)
 
-        let jsonData = try! NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions.PrettyPrinted )
+            let path: String? = reqURL.path
+            let res: Response = InternalWeb.invoke(path!)
 
-        let response = NSHTTPURLResponse(URL: self.request.URL!,
-                                        statusCode: 200,
-                                        HTTPVersion: "1.1",
-                                        headerFields: ["Access-Control-Allow-Origin":"*"])
-        self.client?.URLProtocol(self,
-                                didReceiveResponse: response!,
-                                cacheStoragePolicy: NSURLCacheStoragePolicy.NotAllowed)
-        self.client?.URLProtocol(self, didLoadData: jsonData)
+            p(res.body) // for debug
+
+            let data = res.body.dataUsingEncoding(NSUTF8StringEncoding)
+
+            let response = NSHTTPURLResponse(URL: reqURL,
+                                            statusCode: 200,
+                                            HTTPVersion: "1.1",
+                                            headerFields: ["Access-Control-Allow-Origin":"*"]) as NSURLResponse?
+            self.client?.URLProtocol(self,
+                didReceiveResponse: response!,
+                cacheStoragePolicy: NSURLCacheStoragePolicy.NotAllowed)
+            self.client?.URLProtocol(self, didLoadData: data!)
+        }
         self.client?.URLProtocolDidFinishLoading(self)
     }
-
+    
     override func stopLoading() {}
 }
