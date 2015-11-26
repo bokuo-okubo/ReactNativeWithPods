@@ -9,8 +9,8 @@
 import Foundation
 
 struct Config {
-    // TEMPORARY
-    let host : String = "help.creativesurvey.com"
+    // this config struct is TEMPORARY
+    let hostName : String = "help.creativesurvey.com"
 
     let jsCodeLocation : String = "http://localhost:8081/index.ios.bundle?platform=ios&dev=true"
 
