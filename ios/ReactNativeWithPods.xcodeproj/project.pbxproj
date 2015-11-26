@@ -11,6 +11,7 @@
 		6086E7D8DEBF2D43941AAB2C /* Pods_ReactNativeWithPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1DA7C58417385B79E646F8 /* Pods_ReactNativeWithPods.framework */; };
 		785106BB1BFDC91300640AA5 /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106BA1BFDC91300640AA5 /* MyProtocol.swift */; };
 		7853241F1BFDE9B400556CCF /* RNComponents in Resources */ = {isa = PBXBuildFile; fileRef = 7853241E1BFDE9B400556CCF /* RNComponents */; };
+		7886AA521C06B9A8006BBA2B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886AA511C06B9A8006BBA2B /* Router.swift */; };
 		78D9A0441BFDDD3100FF29F8 /* MyProtocolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9A0431BFDDD3100FF29F8 /* MyProtocolSpec.swift */; };
 		78D9A0461BFDDE5E00FF29F8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9A0451BFDDE5E00FF29F8 /* Config.swift */; };
 		78D9A0481BFDE4CA00FF29F8 /* websites in Resources */ = {isa = PBXBuildFile; fileRef = 78D9A0471BFDE4CA00FF29F8 /* websites */; };
@@ -49,6 +50,7 @@
 		7819C5191BFD5A56008BDD45 /* ReactNativeWithPods-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWithPods-Bridging-Header.h"; sourceTree = "<group>"; };
 		785106BA1BFDC91300640AA5 /* MyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProtocol.swift; sourceTree = "<group>"; };
 		7853241E1BFDE9B400556CCF /* RNComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RNComponents; path = ../RNComponents; sourceTree = "<group>"; };
+		7886AA511C06B9A8006BBA2B /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		78D9A0431BFDDD3100FF29F8 /* MyProtocolSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProtocolSpec.swift; sourceTree = "<group>"; };
 		78D9A0451BFDDE5E00FF29F8 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		78D9A0471BFDE4CA00FF29F8 /* websites */ = {isa = PBXFileReference; lastKnownFileType = folder; name = websites; path = ../websites; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				785106BA1BFDC91300640AA5 /* MyProtocol.swift */,
+				7886AA511C06B9A8006BBA2B /* Router.swift */,
 				78D9A0451BFDDE5E00FF29F8 /* Config.swift */,
 				7819C5191BFD5A56008BDD45 /* ReactNativeWithPods-Bridging-Header.h */,
 				78E52D981BFD577400EDB819 /* AppDelegate.swift */,
@@ -441,6 +444,7 @@
 			files = (
 				785106BB1BFDC91300640AA5 /* MyProtocol.swift in Sources */,
 				78D9A0461BFDDE5E00FF29F8 /* Config.swift in Sources */,
+				7886AA521C06B9A8006BBA2B /* Router.swift in Sources */,
 				78E52D9B1BFD577400EDB819 /* ViewController.swift in Sources */,
 				78E52D991BFD577400EDB819 /* AppDelegate.swift in Sources */,
 			);
