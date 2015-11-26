@@ -5,6 +5,5 @@ cd ios/
 pod install
 open ReactNativeWithPods.xcworkspace/
 cd ../
-JS_DIR=`pwd`/ReactComponents
-cd ios/Pods/Target\ Support\ Files/React
+JS_DIR=`pwd`/RNComponents
 npm run start -- --root $JS_DIR
