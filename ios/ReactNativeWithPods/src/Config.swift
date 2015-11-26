@@ -9,6 +9,7 @@
 import Foundation
 
 struct Config {
+    
     // this config struct is TEMPORARY
     let hostName : String = "help.creativesurvey.com"
 
