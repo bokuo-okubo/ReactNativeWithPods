@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 
 ## install gem cocoapods
 bundle install --path vendor/bundle
