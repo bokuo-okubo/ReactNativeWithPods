@@ -12,15 +12,8 @@
 		78AB86531C0BFE4F00D14CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AB86411C0BFE4F00D14CDF /* Assets.xcassets */; };
 		78AB86541C0BFE4F00D14CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AB86421C0BFE4F00D14CDF /* LaunchScreen.storyboard */; };
 		78AB86551C0BFE4F00D14CDF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78AB86441C0BFE4F00D14CDF /* Info.plist */; };
-		78AB86561C0BFE4F00D14CDF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB86481C0BFE4F00D14CDF /* Media.swift */; };
-		78AB86571C0BFE4F00D14CDF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB86491C0BFE4F00D14CDF /* Router.swift */; };
-		78AB86581C0BFE4F00D14CDF /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB864A1C0BFE4F00D14CDF /* Server.swift */; };
-		78AB86591C0BFE4F00D14CDF /* PseudoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB864B1C0BFE4F00D14CDF /* PseudoServer.swift */; };
-		78AB865A1C0BFE4F00D14CDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB864E1C0BFE4F00D14CDF /* AppDelegate.swift */; };
-		78AB865B1C0BFE4F00D14CDF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB864F1C0BFE4F00D14CDF /* Config.swift */; };
-		78AB865C1C0BFE4F00D14CDF /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB86501C0BFE4F00D14CDF /* MyProtocol.swift */; };
-		78AB865D1C0BFE4F00D14CDF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB86511C0BFE4F00D14CDF /* Utils.swift */; };
-		78AB865E1C0BFE4F00D14CDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB86521C0BFE4F00D14CDF /* ViewController.swift */; };
+		78AB86631C0C0A5200D14CDF /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 78AB86611C0C0A5200D14CDF /* lib */; };
+		78AB86641C0C0A5200D14CDF /* src in Resources */ = {isa = PBXBuildFile; fileRef = 78AB86621C0C0A5200D14CDF /* src */; };
 		78E52DAE1BFD577400EDB819 /* ReactNativeWithPodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E52DAD1BFD577400EDB819 /* ReactNativeWithPodsTests.swift */; };
 		78E52DB91BFD577400EDB819 /* ReactNativeWithPodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E52DB81BFD577400EDB819 /* ReactNativeWithPodsUITests.swift */; };
 		CE566969B3DB6F1FFB1D2D5B /* Pods_ReactNativeWithPodsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E843EA2430EFB8F3FB758C7 /* Pods_ReactNativeWithPodsUITests.framework */; };
@@ -53,16 +46,9 @@
 		78AB86411C0BFE4F00D14CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78AB86431C0BFE4F00D14CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78AB86441C0BFE4F00D14CDF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78AB86481C0BFE4F00D14CDF /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		78AB86491C0BFE4F00D14CDF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		78AB864A1C0BFE4F00D14CDF /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		78AB864B1C0BFE4F00D14CDF /* PseudoServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoServer.swift; sourceTree = "<group>"; };
 		78AB864C1C0BFE4F00D14CDF /* ReactNativeWithPods-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWithPods-Bridging-Header.h"; sourceTree = "<group>"; };
-		78AB864E1C0BFE4F00D14CDF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		78AB864F1C0BFE4F00D14CDF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		78AB86501C0BFE4F00D14CDF /* MyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProtocol.swift; sourceTree = "<group>"; };
-		78AB86511C0BFE4F00D14CDF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		78AB86521C0BFE4F00D14CDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78AB86611C0C0A5200D14CDF /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		78AB86621C0C0A5200D14CDF /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
 		78E52D951BFD577400EDB819 /* ReactNativeWithPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeWithPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E52DA91BFD577400EDB819 /* ReactNativeWithPodsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeWithPodsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E52DAD1BFD577400EDB819 /* ReactNativeWithPodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeWithPodsTests.swift; sourceTree = "<group>"; };
@@ -106,53 +92,14 @@
 		78AB86401C0BFE4F00D14CDF /* ReactNativeWithPods */ = {
 			isa = PBXGroup;
 			children = (
+				78AB86611C0C0A5200D14CDF /* lib */,
+				78AB86621C0C0A5200D14CDF /* src */,
 				78AB86411C0BFE4F00D14CDF /* Assets.xcassets */,
 				78AB86421C0BFE4F00D14CDF /* LaunchScreen.storyboard */,
 				78AB86441C0BFE4F00D14CDF /* Info.plist */,
-				78AB86451C0BFE4F00D14CDF /* lib */,
 				78AB864C1C0BFE4F00D14CDF /* ReactNativeWithPods-Bridging-Header.h */,
-				78AB864D1C0BFE4F00D14CDF /* src */,
 			);
 			path = ReactNativeWithPods;
-			sourceTree = "<group>";
-		};
-		78AB86451C0BFE4F00D14CDF /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				78AB86461C0BFE4F00D14CDF /* PseudoServer */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		78AB86461C0BFE4F00D14CDF /* PseudoServer */ = {
-			isa = PBXGroup;
-			children = (
-				78AB86471C0BFE4F00D14CDF /* lib */,
-				78AB864B1C0BFE4F00D14CDF /* PseudoServer.swift */,
-			);
-			path = PseudoServer;
-			sourceTree = "<group>";
-		};
-		78AB86471C0BFE4F00D14CDF /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				78AB86481C0BFE4F00D14CDF /* Media.swift */,
-				78AB86491C0BFE4F00D14CDF /* Router.swift */,
-				78AB864A1C0BFE4F00D14CDF /* Server.swift */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		78AB864D1C0BFE4F00D14CDF /* src */ = {
-			isa = PBXGroup;
-			children = (
-				78AB864E1C0BFE4F00D14CDF /* AppDelegate.swift */,
-				78AB864F1C0BFE4F00D14CDF /* Config.swift */,
-				78AB86501C0BFE4F00D14CDF /* MyProtocol.swift */,
-				78AB86511C0BFE4F00D14CDF /* Utils.swift */,
-				78AB86521C0BFE4F00D14CDF /* ViewController.swift */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		78E52D8C1BFD577400EDB819 = {
@@ -332,7 +279,9 @@
 			files = (
 				78AB86541C0BFE4F00D14CDF /* LaunchScreen.storyboard in Resources */,
 				78AB86531C0BFE4F00D14CDF /* Assets.xcassets in Resources */,
+				78AB86631C0C0A5200D14CDF /* lib in Resources */,
 				78AB86551C0BFE4F00D14CDF /* Info.plist in Resources */,
+				78AB86641C0C0A5200D14CDF /* src in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,15 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78AB86591C0BFE4F00D14CDF /* PseudoServer.swift in Sources */,
-				78AB86581C0BFE4F00D14CDF /* Server.swift in Sources */,
-				78AB86571C0BFE4F00D14CDF /* Router.swift in Sources */,
-				78AB865E1C0BFE4F00D14CDF /* ViewController.swift in Sources */,
-				78AB865A1C0BFE4F00D14CDF /* AppDelegate.swift in Sources */,
-				78AB865D1C0BFE4F00D14CDF /* Utils.swift in Sources */,
-				78AB865B1C0BFE4F00D14CDF /* Config.swift in Sources */,
-				78AB865C1C0BFE4F00D14CDF /* MyProtocol.swift in Sources */,
-				78AB86561C0BFE4F00D14CDF /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
