@@ -9,13 +9,17 @@
 import Foundation
 
 class Router {
+    
     init() {
     }
 
-    func register<T,F>( path: String, funcs: [(T,F) -> F] ) {
+    func register<T,F>( path: String, funcs: [ T -> F] ) {
+
     }
 
-    func handle() {}
+    func handle(req: Request) {
+
+    }
 }
 
 

@@ -16,4 +16,8 @@ struct Config {
     let jsCodeLocation : String = "http://localhost:8081/index.ios.bundle?platform=ios&dev=true"
 
     let moduleName : String = "ReactNativeWithPods"
+
+    let route: Routable = [
+        "/foo": [.GET, ],
+    ]
 }

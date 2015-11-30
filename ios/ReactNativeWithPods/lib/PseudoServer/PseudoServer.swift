@@ -12,7 +12,7 @@ class InternalWeb {
     static let router = Router()
     static let server = Server(router: router)
 
-    static func invoke(path: String) -> Response {
-        return server.call( Request(["path": path]) )
+    static func invoke(req: Request) -> Response {
+        return server.call(req)
     }
 }

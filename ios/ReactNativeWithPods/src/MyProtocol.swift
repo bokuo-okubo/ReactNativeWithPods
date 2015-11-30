@@ -38,6 +38,7 @@ class MyProtocol: NSURLProtocol {
             let path: String? = reqURL.path
             let res: Response = InternalWeb.invoke(path!)
 
+            p(res.header) // for debug
             p(res.body) // for debug
 
             let data = res.body.dataUsingEncoding(NSUTF8StringEncoding)

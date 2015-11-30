@@ -13,6 +13,8 @@ struct Request {
     let params: Dictionary<String, String>
 
     init(_ params: Dictionary<String, String>) { self.params = params }
+
+    let path: String
 }
 
 struct Response {
