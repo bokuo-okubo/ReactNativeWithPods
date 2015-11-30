@@ -1,8 +1,14 @@
 #!/bin/sh
 
+## install gem cocoapods
+bundle install --path vendor/bundle
+
+## install node modules
 npm install
 cd ios/
-pod install
+
+## install pods
+bundle exec pod install
 open ReactNativeWithPods.xcworkspace/
 cd ../
 JS_DIR=`pwd`/RNComponents
