@@ -1,15 +1,29 @@
-#!/bin/sh -x
+#!/bin/sh
+
+separator() {
+    echo "-------------"
+}
+
+invoke() {
+    echo "$1"
+    eval "$1"
+    separator
+}
 
 ## install gem cocoapods
-bundle install --path vendor/bundle
+invoke "bundle install --path vendor/bundle"
 
 ## install node modules
-npm install
-cd ios/
+invoke "npm install"
+
+
+## move to ios directory
+invoke "cd ios/"
 
 ## install pods
-bundle exec pod install
-open ReactNativeWithPods.xcworkspace/
-cd ../
-JS_DIR=`pwd`/RNComponents
-npm run start -- --root $JS_DIR
+invoke "bundle exec pod install"
+invoke "open ReactNativeWithPods.xcworkspace/"
+
+invoke "cd ../"
+invoke "JS_DIR=`pwd`/RNComponents"
+invoke "npm run start -- --root $JS_DIR"
