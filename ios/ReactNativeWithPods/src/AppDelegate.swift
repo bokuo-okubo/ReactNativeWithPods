@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                    initialProperties: nil,
                                    launchOptions: nil)
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-
+        let ic = ItemController()
 
         let myViewController = ViewController()
         myViewController.view = rootView

@@ -10,7 +10,7 @@ import Foundation
 
 class StubController: RequestHandlable {
     init() {
-        Item.add()
+        Item()
     }
 
     func show(req: Request) -> Response {
