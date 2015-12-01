@@ -9,6 +9,7 @@
 import UIKit
 
 class MyProtocol: NSURLProtocol {
+    
     /* class methods */
     override static func canInitWithRequest(request: NSURLRequest) -> Bool {
 
@@ -36,13 +37,14 @@ class MyProtocol: NSURLProtocol {
             p("requestURL:",reqURL)
 
             let path: String? = reqURL.path
-            let res: Response = InternalWeb.invoke(path!)
+
+            // design PseudoServer ( NSURLRepuest ) -> NSHTTPURLResponse
+            let res: Response = PseudoServer.query(path!)
 
             p(res.header) // for debug
-            p(res.body) // for debug
-
-            let data = res.body.dataUsingEncoding(NSUTF8StringEncoding)
-
+            p(res.payload) // for debug
+            let data = res.payload.dataUsingEncoding(NSUTF8StringEncoding)
+            // TODO : migrate to my response.
             let response = NSHTTPURLResponse(URL: reqURL,
                                             statusCode: 200,
                                             HTTPVersion: "1.1",

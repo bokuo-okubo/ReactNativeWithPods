@@ -13,16 +13,12 @@
 		785801631C0D651500B6E94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7858014C1C0D651500B6E94D /* Assets.xcassets */; };
 		785801641C0D651500B6E94D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858014D1C0D651500B6E94D /* LaunchScreen.storyboard */; };
 		785801651C0D651500B6E94D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7858014F1C0D651500B6E94D /* Info.plist */; };
-		785801661C0D651500B6E94D /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801531C0D651500B6E94D /* Media.swift */; };
-		785801671C0D651500B6E94D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801541C0D651500B6E94D /* Router.swift */; };
-		785801681C0D651500B6E94D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801551C0D651500B6E94D /* Server.swift */; };
 		785801691C0D651500B6E94D /* PseudoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801561C0D651500B6E94D /* PseudoServer.swift */; };
 		7858016A1C0D651500B6E94D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801571C0D651500B6E94D /* Route.swift */; };
 		7858016B1C0D651500B6E94D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858015A1C0D651500B6E94D /* AppDelegate.swift */; };
 		7858016C1C0D651500B6E94D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858015B1C0D651500B6E94D /* Config.swift */; };
 		7858016F1C0D651500B6E94D /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801601C0D651500B6E94D /* MyProtocol.swift */; };
 		785801701C0D651500B6E94D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801611C0D651500B6E94D /* Utils.swift */; };
-		785801711C0D651500B6E94D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785801621C0D651500B6E94D /* ViewController.swift */; };
 		78E52DAE1BFD577400EDB819 /* ReactNativeWithPodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E52DAD1BFD577400EDB819 /* ReactNativeWithPodsTests.swift */; };
 		78E52DB91BFD577400EDB819 /* ReactNativeWithPodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E52DB81BFD577400EDB819 /* ReactNativeWithPodsUITests.swift */; };
 /* End PBXBuildFile section */
@@ -54,9 +50,6 @@
 		7858014C1C0D651500B6E94D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7858014E1C0D651500B6E94D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7858014F1C0D651500B6E94D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		785801531C0D651500B6E94D /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		785801541C0D651500B6E94D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		785801551C0D651500B6E94D /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		785801561C0D651500B6E94D /* PseudoServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoServer.swift; sourceTree = "<group>"; };
 		785801571C0D651500B6E94D /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		785801581C0D651500B6E94D /* ReactNativeWithPods-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWithPods-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -64,7 +57,6 @@
 		7858015B1C0D651500B6E94D /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		785801601C0D651500B6E94D /* MyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProtocol.swift; sourceTree = "<group>"; };
 		785801611C0D651500B6E94D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		785801621C0D651500B6E94D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78E52D951BFD577400EDB819 /* ReactNativeWithPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeWithPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E52DA91BFD577400EDB819 /* ReactNativeWithPodsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeWithPodsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E52DAD1BFD577400EDB819 /* ReactNativeWithPodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeWithPodsTests.swift; sourceTree = "<group>"; };
@@ -108,11 +100,11 @@
 		7858014B1C0D651500B6E94D /* ReactNativeWithPods */ = {
 			isa = PBXGroup;
 			children = (
+				785801581C0D651500B6E94D /* ReactNativeWithPods-Bridging-Header.h */,
 				7858014C1C0D651500B6E94D /* Assets.xcassets */,
 				7858014D1C0D651500B6E94D /* LaunchScreen.storyboard */,
 				7858014F1C0D651500B6E94D /* Info.plist */,
 				785801501C0D651500B6E94D /* lib */,
-				785801581C0D651500B6E94D /* ReactNativeWithPods-Bridging-Header.h */,
 				785801591C0D651500B6E94D /* src */,
 			);
 			path = ReactNativeWithPods;
@@ -139,9 +131,6 @@
 		785801521C0D651500B6E94D /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				785801531C0D651500B6E94D /* Media.swift */,
-				785801541C0D651500B6E94D /* Router.swift */,
-				785801551C0D651500B6E94D /* Server.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -153,7 +142,6 @@
 				7858015B1C0D651500B6E94D /* Config.swift */,
 				785801601C0D651500B6E94D /* MyProtocol.swift */,
 				785801611C0D651500B6E94D /* Utils.swift */,
-				785801621C0D651500B6E94D /* ViewController.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -485,13 +473,9 @@
 			files = (
 				7858016B1C0D651500B6E94D /* AppDelegate.swift in Sources */,
 				785801691C0D651500B6E94D /* PseudoServer.swift in Sources */,
-				785801671C0D651500B6E94D /* Router.swift in Sources */,
 				7858016C1C0D651500B6E94D /* Config.swift in Sources */,
-				785801711C0D651500B6E94D /* ViewController.swift in Sources */,
-				785801681C0D651500B6E94D /* Server.swift in Sources */,
 				785801701C0D651500B6E94D /* Utils.swift in Sources */,
 				7858016A1C0D651500B6E94D /* Route.swift in Sources */,
-				785801661C0D651500B6E94D /* Media.swift in Sources */,
 				7858016F1C0D651500B6E94D /* MyProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

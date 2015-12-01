@@ -11,5 +11,5 @@ import Foundation
 
 // for debugging.
 func p<T>(objs:T...) -> [String] {
-    return objs.map({ print($0); return String($0) })
+    return objs.map({ print( String($0) ); return String($0) })
 }
