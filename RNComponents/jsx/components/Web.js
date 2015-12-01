@@ -16,7 +16,7 @@ var DISABLED_WASH = 'rgba(255,255,255,0.25)';
 
 var TEXT_INPUT_REF = 'urlInput';
 var WEBVIEW_REF = 'webview';
-var DEFAULT_URL = '/Volumes/data/dev/_projects/_CreativeSurvey/ReactNativeWithPods/websites/index.html';
+var DEFAULT_URL = '/Volumes/data/dev/_projects/_CreativeSurvey/iOS_agent/ReactNativeWithPods/websites/index.html';
 
 let Web = React.createClass({
   getInitialState: function() {

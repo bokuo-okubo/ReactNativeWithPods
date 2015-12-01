@@ -17,7 +17,4 @@ struct Config {
 
     let moduleName : String = "ReactNativeWithPods"
 
-    let route: Routable = [
-        "/foo": [.GET, ],
-    ]
 }
