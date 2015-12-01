@@ -20,14 +20,3 @@ enum http {
 }
 
 
-//protocol Routable: Dictionary<String,(http, RequestHandlable)> {
-//    let method: http
-//    let handler: RequestHandlable
-//}
-//
-//protocol RequestHandlable {
-//    let _: Request -> Response
-//}
-
-
-

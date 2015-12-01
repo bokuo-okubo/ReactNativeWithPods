@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                    launchOptions: nil)
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
 
-        let myViewController = ViewController()
+        let myViewController = UIViewController()
         myViewController.view = rootView
 
         self.window!.rootViewController = myViewController

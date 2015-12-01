@@ -6,6 +6,7 @@ use_frameworks!
 
 def main_pods
   pod 'Realm'
+  pod 'Dollar'
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
     'Core',
     'RCTImage',
@@ -13,6 +14,7 @@ def main_pods
     'RCTText',
     'RCTWebSocket',
     # Add any other subspecs you want to use in your project
+
   ]
 end
 
