@@ -39,11 +39,11 @@ class MyProtocol: NSURLProtocol {
             let path: String? = reqURL.path
 
             // design PseudoServer ( NSURLRepuest ) -> NSHTTPURLResponse
-            let res: Response = PseudoServer.query(path!)
+            let res: PseudoServer.Response = PseudoServer.query(path!)
 
             p(res.header) // for debug
             p(res.payload) // for debug
-            let data = res.payload.dataUsingEncoding(NSUTF8StringEncoding)
+            let data = res.payload.joinWithSeparator("").dataUsingEncoding(NSUTF8StringEncoding)
             // TODO : migrate to my response.
             let response = NSHTTPURLResponse(URL: reqURL,
                                             statusCode: 200,

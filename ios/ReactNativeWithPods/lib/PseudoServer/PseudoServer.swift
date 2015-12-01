@@ -9,103 +9,21 @@
 import Foundation
 import Dollar
 
-typealias RouteMap = [String : [ Responsible ]]
+struct PseudoServer {
 
-typealias Responsible = (Request,Response) -> Response
-
-typealias Request = Dictionary<String,String>
-
-
-/* ----------------------------------------------- */
-
-class Response {
-
-    // TODO : wrap primitive response type
-    var header: String
-    var payload: String
-
-    init() { (header,payload) = ("","") }
-
-    func header(args: String...) -> Void {
-        self.header = args.reduce(self.header,
-            combine: { (result, current) -> String in
-                return result + current}
-        )
-    }
-
-    func write(args: MiddleWare...) -> Void{
-        self.payload = args.reduce(self.payload,
-            combine: { (result, current) -> String in
-                return result + current}
-        )
-    }
-
-    func end() {
-        // closing response
-    }
-}
-
-/* ----------------------------------------------- */
-
-class MiddleWare {
-
-    let stack: [ Responsible ]
-
-    init(funcs: [ Responsible ] ) {
-        stack = funcs
-    }
-
-    func handle(req: Request, res:Response) {
-        MiddleWare.reduce
-    }
-
-    static func reduce(stack: [Responsible], req: Request, res:Response) {
-        stack.count
-
-        return Response()
-    }
-}
-/* ----------------------------------------------- */
-
-class Router {
-    let route: RouteMap
-
-    init(route: RouteMap) {
-        self.route = route
-    }
-
-    func handle(req: Request, res: Response)->Response {
-        return;
-    }
-}
-
-class Server {
-
-    let router: Router
-
-    init(router: Router) {
-        self.router = router
-    }
-
-    func call(req: Request,res: Response) -> Response {
-        return Response()
-    }
-}
-
-/* -----------------------------------------------
-*   main
-*  ----------------------------------------------- */
-
-class PseudoServer {
-    static let router = Router(route: PseudoServer.ROUTE)
-    static let server = Server(router: router)
-
+    /* -----------------------------------------------
+    *   main
+    *  ----------------------------------------------- */
     static let ROUTE: RouteMap = [
-        "/foo": [Acts().session, Acts.auth],
-        "/bar": [Acts().session]
+        "/foo": [Acts.session, Acts.auth],
+        "/bar": [Acts.session ]
     ]
 
     static func query(path:String) -> Response {
+
+        let router = Router(routemap: ROUTE)
+        let server = Server(router: router)
+
         return invoke(server, path: path)
     }
 
@@ -113,17 +31,122 @@ class PseudoServer {
         let req: Request = ["path": path]
         return server.call(req, res: Response() );
     }
-}
 
 
-struct Acts {
+    struct Acts {
 
-    let session: Responsible = { req, res in
-        var hashValue = [String(random())]
-        return res.write(hashValue)
+        static let session: Responsible = { req, res -> Response in
+            return res
+        }
+
+        static let auth: Responsible = { req, res -> Response in
+            return res
+        }
     }
 
-    static func auth(req: Request, res: Response) -> Response {
-        return Response()
+    /* ----------------------------------------------- */
+
+    typealias RouteMap = [String : [Responsible]]
+
+    typealias Responsible = (Request,Response) -> Response
+
+    typealias Request = Dictionary<String,String>
+
+    /* ----------------------------------------------- */
+
+    class Response {
+
+        // TODO : wrap primitive response type
+        var header : [String]
+        var payload : [String]
+
+        convenience init() {
+            self.init(header: [""], payload: [""])
+        }
+
+        init(header: [String], payload: [String]) {
+            (self.header,self.payload) = (header,payload)
+        }
+
+        func header(header: String...) -> Response {
+            self.header += header
+            return self
+        }
+
+        func payload(payload: String...) -> Response {
+            self.payload += payload
+            return self
+        }
+
+        func end() -> Response {
+            p("end:", header.debugDescription, payload.debugDescription )
+            return self
+        }
+    }
+
+    /* ----------------------------------------------- */
+
+    class MiddleWare {
+
+        let stack: [ Responsible ]
+
+        init(funcs: [ Responsible ] ) { stack = funcs }
+
+        func handle(req: Request, res:Response) -> Response{
+//            MiddleWare.reduce()
+            return res.payload("うんこ")
+        }
+
+        static func reduce(stack: [Responsible], req: Request, res:Response) {
+            stack.count
+
+  //          return Response()
+        }
+    }
+    /* ----------------------------------------------- */
+
+    class Router {
+        var route: [String: MiddleWare]
+
+        init(routemap: RouteMap) {
+            // TODO : FIXME
+            self.route.map([routemap.first]
+            routemap.forEach({ path, handlers in
+                self.register(path, handlers: handlers)
+            })
+        }
+
+        private func register(path: String, handlers: [Responsible]) {
+            if !self.route.keys.contains(path) {
+                self.route[path] = MiddleWare(funcs: handlers)
+            }
+        }
+
+        func handle(req: Request, res: Response)-> Response {
+            if let path = req["path"] {
+                if let middle = self.route[path] {
+                    return middle.handle(req, res: res)
+                } else {
+                    return res.payload("404 NOT FOUND")
+                }
+            } else {
+                return res.payload("BAD REQUEST")
+            }
+        }
+    }
+
+    /* ----------------------------------------------- */
+    class Server {
+
+        let router: Router
+
+        init(router: Router) {
+            self.router = router
+        }
+
+        func call(req: Request,res: Response) -> Response {
+            p("[Request]:", req.debugDescription)
+            return self.router.handle(req, res: res)
+        }
     }
 }
